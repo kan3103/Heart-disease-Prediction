@@ -8,7 +8,7 @@ This repository contains machine learning models for classification tasks, inclu
 - **decision.ipynb**: Jupyter notebook for training and evaluating the Decision Tree 
 - **ANN.ipynb**: Jupyter notebook for training and evaluating the ANN model
 - **decision_tree_model.pkl**: Saved Decision Tree model (pickle format)
-- **heart_disease_model_new.h5**: Saved heart disease prediction model (HDF5 format)
+- **heart_disease_model_new.h5**: Saved heart disease prediction model by ANN (HDF5 format)
 - **naive_bayes_model.pkl**: Saved Naive Bayes model (pickle format)
 
 ## Model Files
@@ -39,6 +39,6 @@ To run the notebooks and load the models, you'll need:
 - Pandas
 
 Install dependencies using pip:
-```
+``` bash
 pip install -r requirements.txt
 ```
