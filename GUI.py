@@ -94,7 +94,8 @@ if submitted:
         
         # Dự đoán
         if model_choice == "ANN":
-            input_df_scaled = StandardScaler().fit_transform(input_df)
+            scaler = joblib.load('scaler/scaler.pkl')
+            input_df_scaled = scaler.transform(input_df)
             prediction = ann_model.predict(input_df_scaled)
             probability = prediction[0][0]
         elif model_choice == "Naive Bayes":
@@ -108,7 +109,8 @@ if submitted:
             if 'HvyAlcoholConsump' in input_data:
                 del input_data['HvyAlcoholConsump']
             input_df = pd.DataFrame([input_data])
-            input_df_scaled = StandardScaler().fit_transform(input_df)
+            scaler = joblib.load('scaler/scaler.pkl')
+            input_df_scaled = scaler.transform(input_df)
             prediction = ann_model.predict(input_df_scaled)
             probability1 = prediction[0][0]
             
